@@ -1,6 +1,6 @@
 <?php
 use Step\Acceptance\Admin as AdminTester;
-class LI_01Cest
+class LI_15Cest
 {
     public function _before(AcceptanceTester $I)
     {
@@ -12,5 +12,8 @@ class LI_01Cest
         $I = new AdminTester($scenario);
         $I->loginAsAdmin('binhbeo0712@gmail.com','Binh123456');
         $I->see('Pass/HomePage');
+        $I->closeTab();
+        $I->openNewTab();
+        $I->see('Login');
     }
 }
