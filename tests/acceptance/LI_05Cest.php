@@ -19,7 +19,7 @@ class LI_05Cest
     {
         $I = new AdminTester($scenario);
         $I->loginAsAdmin('binhbeo0712@gmail.com','    ');
-        $I->waitForText('ERROR', 5);
+        $I->waitForText('ERROR', 30);
         $I->comment('The password field is emmty');
     }
 }

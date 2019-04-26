@@ -19,7 +19,7 @@ class LI_06Cest
     {
         $I = new AdminTester($scenario);
         $I->loginAsAdmin('binhbeo0712@gmail.com','');
-        $I->waitForText('enter your password', 5);
+        $I->waitForText('enter your password', 30);
         $I->comment('Can not login with an empty password');
     }
 }

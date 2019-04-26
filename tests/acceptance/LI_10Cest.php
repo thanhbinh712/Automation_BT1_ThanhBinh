@@ -13,9 +13,9 @@ class LI_10Cest
          */
     {
         $I->amOnPage(LoginPage::$URL);
-        $I->waitForElementVisible(LoginPage::$continueGGButton,5);
+        $I->waitForElementVisible(LoginPage::$continueGGButton,30);
         $I->click(LoginPage::$continueGGButton);
-        $I->waitForText('Sign in with google', 5);
+        $I->waitForText('Sign in with google', 30);
         //waitForElement(Xpath, time)
         $I->comment('Continue with Google page');
     }

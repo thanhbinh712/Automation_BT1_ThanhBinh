@@ -19,9 +19,9 @@ class LI_09Cest
 
     {
         $I->amOnPage(LoginPage::$URL);
-        $I->waitForElement(LoginPage::$termsOfServiceLink, 10);
+        $I->waitForElement(LoginPage::$termsOfServiceLink, 30);
         $I->click(LoginPage::$termsOfServiceLink);
-        $I->waitForText('Terms of Service', 5);
+        $I->waitForText('Terms of Service', 30);
         //waitForElement(Xpath, time)
         $I->comment('Terms of service page');
 

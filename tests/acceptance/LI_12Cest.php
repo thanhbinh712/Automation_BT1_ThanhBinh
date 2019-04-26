@@ -15,7 +15,7 @@ class LI_12Cest
         $I->amOnPage(LoginPage::$URL);
         $I->waitForElement(LoginPage::$emailMeLink, 30);
         $I->click(LoginPage::$emailMeLink);
-        $I->waitForText('Email me a login link', 5);
+        $I->waitForText('Email me a login link', 30);
         $I->comment('Email me a login link page');
     }
 }

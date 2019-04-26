@@ -15,7 +15,7 @@ class LI_13Cest
         $I->amOnPage(LoginPage::$URL);
         $I->waitForElement(LoginPage::$forgotPassLink, 30);
         $I->click(LoginPage::$forgotPassLink);
-        $I->waitForText('Lost your password', 5);
+        $I->waitForText('Lost your password', 30);
         $I->comment('Lost password page');
     }
 }

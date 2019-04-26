@@ -18,7 +18,7 @@ class LI_22Cest
         $I->waitForText('Followed Sites', 30);
         $I->closeTab(\Page\Login::$URL);
         $I->openNewTab(\Page\Login::$URL);
-        $I->waitForText('Log in', 10);
+        $I->waitForText('Log in', 30);
         $I->comment('Log out mode');
     }
 }

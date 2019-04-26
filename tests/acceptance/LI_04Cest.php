@@ -18,7 +18,7 @@ class LI_04Cest
     {
         $I = new AdminTester($scenario);
         $I->loginAsAdmin('','Binh123456');
-        $I->waitForText('Please enter a username or email address', 5);
+        $I->waitForText('Please enter a username or email address', 30);
         $I->comment('Password is empty');
     }
 }

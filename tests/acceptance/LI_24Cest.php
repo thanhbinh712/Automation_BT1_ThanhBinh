@@ -14,7 +14,7 @@ class LI_24Cest
     {
         $I = new AdminTester($scenario);
         $I->checkEnter('binhbeo0712@gmail.com', 'Binh123456');
-        $I->waitForElement(\Page\Login::$continueButton, 5);
+        $I->waitForElement(\Page\Login::$continueButton, 30);
         $I->comment('Enter keys is OK');
     }
 }

@@ -14,7 +14,7 @@ class LI_20Cest
     {
         $I = new AdminTester($scenario);
         $I->loginAsAdmin('https://accounts.google.com/binhbeo0712@gmail.com','Binh123456');
-        $I->waitForText('404', 5);
+        $I->waitForText('404', 30);
         $I->comment('404 Error');
     }
 }

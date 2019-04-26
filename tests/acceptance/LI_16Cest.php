@@ -13,9 +13,9 @@ class LI_16Cest
          */
     {
         $I->amOnPage(LoginPage::$URL);
-        $I->waitForElementVisible(LoginPage::$signUp,5);
+        $I->waitForElementVisible(LoginPage::$signUp,30);
         $I->click(LoginPage::$signUp);
-        $I->waitForText('Let\'s get started', 5);
+        $I->waitForText('Let\'s get started', 30);
         //waitForElement(Xpath, time)
         $I->comment('Sign up page');
     }

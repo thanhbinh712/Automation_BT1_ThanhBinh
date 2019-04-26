@@ -15,7 +15,7 @@ class LI_11Cest
         $I->amOnPage(LoginPage::$URL);
         $I->waitForElement(LoginPage::$createNewAccountLink, 30);
         $I->click(LoginPage::$createNewAccountLink);
-        $I->waitForText('Let\'s get started', 5);
+        $I->waitForText('Let\'s get started', 30);
         $I->comment('Sign up page');
     }
 }
