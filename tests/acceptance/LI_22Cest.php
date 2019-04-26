@@ -7,7 +7,11 @@ class LI_22Cest
     }
 
     // tests
-    public function tryToTest(AdminTester $I, $scenario)
+    public function checkLogWhenReopenTab(AdminTester $I, $scenario)
+        /**
+         * @checkLogWhenReopenTab to check log mode when closing tab and reopened
+         */
+
     {
         $I = new AdminTester($scenario);
         $I->loginAsAdmin('binhbeo0712@gmail.com', 'Binh123456');

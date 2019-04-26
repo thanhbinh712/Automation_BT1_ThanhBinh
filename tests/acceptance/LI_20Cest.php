@@ -7,7 +7,10 @@ class LI_20Cest
     }
 
     // tests
-    public function tryToTest(AdminTester $I, $scenario )
+    public function loginWithURL(AdminTester $I, $scenario )
+        /**
+         * @loginWithURL to check when login with an URL
+         */
     {
         $I = new AdminTester($scenario);
         $I->loginAsAdmin('https://accounts.google.com/binhbeo0712@gmail.com','Binh123456');

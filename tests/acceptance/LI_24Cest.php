@@ -8,6 +8,9 @@ class LI_24Cest
 
     // tests
     public function enterKeyboard(AdminTester $I, $scenario)
+        /**
+         * @enterKeyboard to check the keys Enter
+         */
     {
         $I = new AdminTester($scenario);
         $I->checkEnter('binhbeo0712@gmail.com', 'Binh123456');
