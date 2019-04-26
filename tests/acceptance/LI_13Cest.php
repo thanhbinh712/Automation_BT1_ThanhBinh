@@ -7,13 +7,15 @@ class LI_13Cest
     }
 
     // tests
-    public function tryToTest(AcceptanceTester $I )
+    public function checkLostPass(AcceptanceTester $I )
+        /**
+         * @checkLostPass to check when clicking on [Lost your password] link
+         */
     {
-        $I->amOnPage('//log-in?redirect_to=https%3A%2F%2Fwordpress.com%2F');
-        //$I = new AdminTester($scenario);
-        $I->wait(5);
-        $I->click(LoginPage::$headerSignUp);
-        $I->wait(2);
-        $I->see('Sign up page');
+        $I->amOnPage(LoginPage::$URL);
+        $I->waitForElement(LoginPage::$forgotPassLink, 30);
+        $I->click(LoginPage::$forgotPassLink);
+        $I->waitForText('Lost your password', 5);
+        $I->comment('Lost password page');
     }
 }

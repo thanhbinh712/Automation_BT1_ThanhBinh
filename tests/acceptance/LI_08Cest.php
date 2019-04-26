@@ -1,6 +1,6 @@
 <?php
-//use Step\Acceptance\Admin as AdminTester;
-use Page\Login as LoginPage;
+use Step\Acceptance\Admin as AdminTester;
+
 class LI_08Cest
 {
     public function _before(AcceptanceTester $I)
@@ -8,13 +8,13 @@ class LI_08Cest
     }
 
     // tests
-    public function tryToTest(AcceptanceTester $I )
+    public function hidePass(AdminTester $I, $scenario )
+        /**
+         * @hidePass to check the password is *** when typing a password
+         */
     {
-        $I->amOnPage('//log-in?redirect_to=https%3A%2F%2Fwordpress.com%2F');
-        //$I = new AdminTester($scenario);
-        $I->wait(5);
-        $I->click(LoginPage::$HyperlinkTermsOfService);
-        $I->wait(3);
-        $I->see('Terms of service page');
+        $I = new AdminTester($scenario);
+        $I->checkHidePassword('binhbeo0712@gmail.com','Binh123456');
+        $I->comment('Password is hidden as •');
     }
 }

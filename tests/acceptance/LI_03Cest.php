@@ -7,7 +7,10 @@ class LI_03Cest
     }
 
     // tests
-    public function tryToTest(AdminTester $I, $scenario )
+    public function loginEmailInvalid(AdminTester $I, $scenario )
+        /**
+         * @loginEmailInvalid to login with an invalid Email address
+         */
     {
         $I = new AdminTester($scenario);
         $I->loginAsAdmin('bbinhbeo0712@gmail.com','Binh123456');

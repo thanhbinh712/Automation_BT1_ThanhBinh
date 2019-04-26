@@ -7,13 +7,16 @@ class LI_10Cest
     }
 
     // tests
-    public function tryToTest(AcceptanceTester $I )
+    public function checkContinueGGButton(AcceptanceTester $I )
+        /**
+         * @checkContinueGGButton to check when clicking on [Continue with Google] button
+         */
     {
-        $I->amOnPage('//log-in?redirect_to=https%3A%2F%2Fwordpress.com%2F');
-        //$I = new AdminTester($scenario);
-        $I->wait(5);
-        $I->click(LoginPage::$HyperlinkLostPass);
-        $I->wait(2);
-        $I->see('Lost your password page');
+        $I->amOnPage(LoginPage::$URL);
+        $I->waitForElementVisible(LoginPage::$continueGGButton,5);
+        $I->click(LoginPage::$continueGGButton);
+        $I->waitForText('Sign in with google', 5);
+        //waitForElement(Xpath, time)
+        $I->comment('Continue with Google page');
     }
 }

@@ -7,13 +7,16 @@ class LI_16Cest
     }
 
     // tests
-    public function tryToTest(AcceptanceTester $I )
+    public function signUp(AcceptanceTester $I )
+        /**
+         * @signUp to check when clicking on [Sign up]
+         */
     {
-        $I->amOnPage('//log-in?redirect_to=https%3A%2F%2Fwordpress.com%2F');
-        //$I = new AdminTester($scenario);
-        $I->wait(5);
-        $I->click(LoginPage::$ContinueWithGGButton);
-        $I->wait(3);
-        $I->see('Continue with Google account');
+        $I->amOnPage(LoginPage::$URL);
+        $I->waitForElementVisible(LoginPage::$signUp,5);
+        $I->click(LoginPage::$signUp);
+        $I->waitForText('Let\'s get started', 5);
+        //waitForElement(Xpath, time)
+        $I->comment('Sign up page');
     }
 }

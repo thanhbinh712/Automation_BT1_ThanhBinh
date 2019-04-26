@@ -1,6 +1,6 @@
 <?php
-use Step\Acceptance\Admin2 as AdminTester;
-use Page\Login as LoginPage;
+use Step\Acceptance\Admin as AdminTester;
+
 class LI_07Cest
 {
     public function _before(AcceptanceTester $I)
@@ -8,10 +8,13 @@ class LI_07Cest
     }
 
     // tests
-    public function tryToTest(AdminTester $I, $scenario )
+    public function showPass(AdminTester $I, $scenario )
+        /**
+         * @showPass is to show the password when clicking on eye icon
+         */
     {
         $I = new AdminTester($scenario);
-        $I->loginAsAdmin('binhbeo0712@gmail.com','Binh1256');
-        $I->see('Show password');
+        $I->showPassword('binhbeo0712@gmail.com','Binh123456');
+        $I->comment('Show password');
     }
 }

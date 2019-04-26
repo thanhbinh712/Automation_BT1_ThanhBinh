@@ -1,19 +1,29 @@
 <?php
+//use Step\Acceptance\Admin as AdminTester;
 use Page\Login as LoginPage;
 class LI_09Cest
 {
     public function _before(AcceptanceTester $I)
     {
     }
+    /**
+     * @param AcceptanceTester $I
+     * @throws Exception
+     */
 
-    // tests
-    public function tryToTest(AcceptanceTester $I )
+    // test2s
+    public function clickOnTOSLink(AcceptanceTester $I )
+        /**
+         * @clickOnTOSLink to click on link Terms of Service
+         */
+
     {
-        $I->amOnPage('//log-in?redirect_to=https%3A%2F%2Fwordpress.com%2F');
-        //$I = new AdminTester($scenario);
-        $I->wait(5);
-        $I->click(LoginPage::$HyperlinkCreateNewAccount);
-        $I->wait(2);
-        $I->see('Sign Up page');
+        $I->amOnPage(LoginPage::$URL);
+        $I->waitForElement(LoginPage::$termsOfServiceLink, 10);
+        $I->click(LoginPage::$termsOfServiceLink);
+        $I->waitForText('Terms of Service', 5);
+        //waitForElement(Xpath, time)
+        $I->comment('Terms of service page');
+
     }
 }

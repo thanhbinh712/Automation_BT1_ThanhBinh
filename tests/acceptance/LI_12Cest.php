@@ -7,13 +7,15 @@ class LI_12Cest
     }
 
     // tests
-    public function tryToTest(AcceptanceTester $I )
+    public function checkEmailALink(AcceptanceTester $I )
+        /**
+         * @checkEmailALink to check [Email me a login link] link
+         */
     {
-        $I->amOnPage('//log-in?redirect_to=https%3A%2F%2Fwordpress.com%2F');
-        //$I = new AdminTester($scenario);
-        $I->wait(5);
-        $I->click(LoginPage::$HyperlinkBackToWP);
-        $I->wait(2);
-        $I->see('Back to Wordpress first page');
+        $I->amOnPage(LoginPage::$URL);
+        $I->waitForElement(LoginPage::$emailMeLink, 30);
+        $I->click(LoginPage::$emailMeLink);
+        $I->waitForText('Email me a login link', 5);
+        $I->comment('Email me a login link page');
     }
 }

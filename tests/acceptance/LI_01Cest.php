@@ -7,10 +7,16 @@ class LI_01Cest
     }
 
     // tests
-    public function tryToTest(AdminTester $I, $scenario )
+
+    /**
+     * @param AdminTester $I
+     * @param $scenario
+     * @throws Exception
+     */
+    public function loginSuccess(AdminTester $I, $scenario )
     {
         $I = new AdminTester($scenario);
         $I->loginAsAdmin('binhbeo0712@gmail.com','Binh123456');
-        $I->see('Pass/HomePage');
+        $I->waitForText('Followed Sites', 5);
     }
 }

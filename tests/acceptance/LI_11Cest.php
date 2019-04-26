@@ -7,13 +7,15 @@ class LI_11Cest
     }
 
     // tests
-    public function tryToTest(AcceptanceTester $I )
+    public function checkCreateAccountLink(AcceptanceTester $I )
+        /**
+         * @checkCreateAccountlink to check when clicking on [Create a new account] link
+         */
     {
-        $I->amOnPage('//log-in?redirect_to=https%3A%2F%2Fwordpress.com%2F');
-        //$I = new AdminTester($scenario);
-        $I->wait(5);
-        $I->click(LoginPage::$HyperlinkEmailALoginLink);
-        $I->wait(2);
-        $I->see('Email me a login link page');
+        $I->amOnPage(LoginPage::$URL);
+        $I->waitForElement(LoginPage::$createNewAccountLink, 30);
+        $I->click(LoginPage::$createNewAccountLink);
+        $I->waitForText('Let\'s get started', 5);
+        $I->comment('Sign up page');
     }
 }
