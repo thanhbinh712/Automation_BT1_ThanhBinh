@@ -19,7 +19,7 @@ class Admin extends \AcceptanceTester
         $I->wait(2);
         $I->fillField(LoginPage::$passwordField, $password);
         $I->click(LoginPage::$loginButton);
-        $I->waitForText("Followed Sites", 5);
+        $I->waitForText('Welcome', 15);
     }
 
     public function showPassword($name,$password)
@@ -29,15 +29,15 @@ class Admin extends \AcceptanceTester
     {
         $I = $this;
         $I->amOnPage(LoginPage::$URL);
-        $I->waitForElementVisible(LoginPage::$usernameField, 5);
+        $I->waitForElementVisible(LoginPage::$usernameField, 30);
         $I->fillField(LoginPage::$usernameField, $name);
-        $I->waitForElementVisible(LoginPage::$continueButton, 5);
+        $I->waitForElementVisible(LoginPage::$continueButton, 30);
         $I->click(LoginPage::$continueButton);
-        $I->waitForElementVisible(LoginPage::$passwordField, 5);
+        $I->waitForElementVisible(LoginPage::$passwordField, 30);
         $I->fillField(LoginPage::$passwordField, $password);
-        $I->waitForElementVisible(LoginPage::$eyeIcon, 5);
+        $I->waitForElementVisible(LoginPage::$eyeIcon, 30);
         $I->click(LoginPage::$eyeIcon);
-        $I->waitForElementVisible(LoginPage::$passwordText, 5);
+        $I->waitForElementVisible(LoginPage::$passwordText, 30);
     }
 
     public function checkHidePassword($name,$password)
@@ -47,15 +47,15 @@ class Admin extends \AcceptanceTester
     {
         $I = $this;
         $I->amOnPage(LoginPage::$URL);
-        $I->waitForElementVisible(LoginPage::$usernameField, 5);
+        $I->waitForElementVisible(LoginPage::$usernameField, 30);
         $I->fillField(LoginPage::$usernameField, $name);
-        $I->waitForElementVisible(LoginPage::$continueButton, 5);
+        $I->waitForElementVisible(LoginPage::$continueButton, 30);
         $I->click(LoginPage::$continueButton);
-        $I->waitForElementVisible(LoginPage::$passwordField, 5);
+        $I->waitForElementVisible(LoginPage::$passwordField, 30);
         $I->fillField(LoginPage::$passwordField, $password);
        // $I->waitForElementVisible(LoginPage::$eyeIcon, 5);
 //        $I->click(LoginPage::$eyeIcon);
-        $I->waitForElementVisible(LoginPage::$passwordText, 5);
+        $I->waitForElementVisible(LoginPage::$passwordText, 30);
     }
     public function checkEnter($name, $password)
         /**
@@ -64,7 +64,7 @@ class Admin extends \AcceptanceTester
     {
         $I = $this;
         $I->amOnPage(LoginPage::$URL);
-        $I->waitForElementVisible(LoginPage::$usernameField, 5);
+        $I->waitForElementVisible(LoginPage::$usernameField, 30);
         $I->fillField(LoginPage::$usernameField, $name);
         $I->pressKey(Login::$continueButton,\Facebook\WebDriver\WebDriverKeys::ENTER);
     }

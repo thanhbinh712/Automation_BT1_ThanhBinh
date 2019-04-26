@@ -14,7 +14,7 @@ class LI_02Cest
     {
         $I = new AdminTester($scenario);
         $I->loginAsAdmin('binhbeo0712@gmail.com','Binh1256');
-        $I->waitForText("Followed Sites", 30);
-        $I->comment("Wrong password!");
+        $I->waitForText('Oops', 30);
+        $I->comment('Wrong password!');
     }
 }

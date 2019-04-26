@@ -15,6 +15,6 @@ class LI_03Cest
         $I = new AdminTester($scenario);
         $I->loginAsAdmin('bbinhbeo0712@gmail.com','Binh123456');
         $I->waitForText('User does not exist');
-        $I->comment("Invalid email address");
+        $I->comment('Invalid email address');
     }
 }

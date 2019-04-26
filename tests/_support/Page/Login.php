@@ -31,7 +31,7 @@ class Login
 
     public static $passwordText = '//input[@type="password"][@class="form-text-input"]';
 
-    public static $continueGGButton = 'Continue with Google';
+    public static $continueGGButton = '//button[@class="social-buttons__button button"]';
 
     /**
      * Declare UI map for this page here. CSS or XPath allowed.
